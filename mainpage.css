@@ -1,0 +1,154 @@
+.start-animation{
+  width:100%;
+  height: 100%;
+  background-color:none;
+  position: fixed;
+  z-index: 1;
+  animation: background-change 0.8s 1;
+}
+
+body{
+  width:2300px;
+  margin:0;
+  padding:0;
+  overflow-y:hidden;
+  background-color:#a9a9a9;
+}
+
+.mobile-hr{
+  width:25%;
+  border-color: black;
+  margin:7% auto;
+  display:none;
+}
+
+.scrolling-title{
+  font-family:'Press Start 2P', cursive;
+  font-size:1.25rem;
+  color:#FF00CC;
+}
+
+.marquee {
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  height: 50px;
+  overflow-x: hidden;
+  margin-top: 3%;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 9s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.scrolling-title:hover{
+  cursor:pointer;
+}
+
+.menu-container{
+  text-align:center;
+  position:relative;
+  top:28rem;
+  margin-left: auto;
+}
+.menu-item{
+  font-size: 5rem;
+  letter-spacing:30px;
+  font-family: 'Press Start 2P', cursive;
+  -webkit-text-stroke: 4px  black;
+  color:#a9a9a9;
+}
+
+#about, #work, #contact{
+  color:#a9a9a9;
+  -webkit-text-stroke: 4px  black;
+  text-decoration: none;
+}
+
+.text-animation{
+  animation:color-change 0.5s infinite;
+}
+
+@keyframes color-change{
+  0% {color:#FFFF00;}
+  20% {color:#FF0000;}
+  40% {color:#099FFF;}
+  60% {color:#9D00FF;}
+  80% {color:#FF00CC;}
+  100% {color: #00FF00;}
+}
+
+@keyframes background-change {
+  0% {
+    background-color:#FFFF00;
+    opacity:90%;
+      }
+  20% {
+    background-color:#FF0000;
+    opacity:75%;
+      }
+  40% {
+    background-color:#099FFF;
+    opacity: 50%;
+  }
+  60% {
+    background-color:#9D00FF;
+    opacity: 35%;
+      }
+  80% {
+    background-color:#FF00CC;
+    opacity: 20%;
+      }
+  100% {
+    background-color: #00FF00;
+    opacity: 5%;
+      }
+}
+
+.menu-item:hover{
+  cursor:pointer;
+}
+
+.social{
+  position:fixed;
+  left:47%;
+  bottom:10%;
+}
+
+.contact-item{
+  color:#FF00CC;
+  font-size: 1rem;
+  margin:auto 1rem;
+}
+
+.contact-item:hover{
+  animation:color-change 0.5s infinite;
+}
+
+@media only screen and (max-width: 900px){
+  body{
+    width:100%;
+    overflow-y:visible;
+  }
+
+  .menu-container{
+    top:15rem;
+  }
+
+  .slash{
+    display: none;
+  }
+
+  .mobile-hr{
+    display: block;
+  }
+
+}
